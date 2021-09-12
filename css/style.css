@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.deck {
+.board {
   width: 660px;
   min-height: 680px;
   background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
@@ -94,8 +94,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   margin: 0 0 3em;
+  position: relative;
 }
-.deck .card {
+.board .card {
   height: 125px;
   width: 125px;
   background: #2e3d49;
@@ -107,6 +108,19 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+.board .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+}
+.board .card.show {
+  font-size: 33px;
+}
+.board .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
 }
 
 /*# sourceMappingURL=style.css.map */
