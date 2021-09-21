@@ -3,28 +3,33 @@
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+
 }
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
 
 }
-.board {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 3em;
-    position: relative;
 
-    .card {
+.board {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+  position: relative;
+
+  .card {
     height: 125px;
     width: 125px;
     background: #2e3d49;
@@ -37,21 +42,98 @@
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 
-    }
+  }
 
-.card.open {
-    transform: rotateY(0);
+  .card.open {
+    transform: rotateY(180deg);
     background: #02b3e4;
     cursor: default;
-}
+    transition: 1s;
+
+    i {
+      transform: rotateY(-180deg);
+    }
+  }
+
   .card.show {
     font-size: 33px;
   }
+
   .card.match {
-     cursor: default;
+    cursor: default;
     background: #02ccba;
     font-size: 33px;
   }
 }
 
 
+body {
+  background: #ffffff url('../img/geometry2.png');
+  font-family: 'Coda', cursive;
+}
+
+.header {
+  margin: 0 0 10px 45px;
+}
+.timer {
+  margin-left: 30px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 15px;
+}
+
+.score-panel .stars {
+
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+
+}
+
+.score-panel .stars li {
+
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+.game_victory {
+  position: absolute;
+  top:40%;
+  left:47%;
+  z-index: 2;
+  display:none;
+}
+.game_victory_play-again {
+  margin: 10px 0 0 40px;
+}
+.play_again {
+  display:block;
+  padding: 10px 15px;
+  background-color: greenyellow;
+}
+
+.game_victory_icon {
+  margin: 0 0 20px 60px;
+  width: 50px;
+  height: 50px;
+  border: 2px #19bd51 solid;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  color: #19bd51;
+  i {
+    margin-top: 10px;
+  }
+}

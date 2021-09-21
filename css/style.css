@@ -80,6 +80,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
 }
 
 .board {
@@ -110,9 +112,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 .board .card.open {
-  transform: rotateY(0);
+  transform: rotateY(180deg);
   background: #02b3e4;
   cursor: default;
+  transition: 1s;
+}
+.board .card.open i {
+  transform: rotateY(-180deg);
 }
 .board .card.show {
   font-size: 33px;
@@ -121,6 +127,78 @@ h1, h2, h3, h4, h5, h6 {
   cursor: default;
   background: #02ccba;
   font-size: 33px;
+}
+
+body {
+  background: #ffffff url("../img/geometry2.png");
+  font-family: "Coda", cursive;
+}
+
+.header {
+  margin: 0 0 10px 45px;
+}
+
+.timer {
+  margin-left: 30px;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 15px;
+}
+
+.score-panel .stars {
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+.game_victory {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  z-index: 2;
+  display: none;
+}
+
+.game_victory_play-again {
+  margin: 10px 0 0 40px;
+}
+
+.play_again {
+  display: block;
+  padding: 10px 15px;
+  background-color: greenyellow;
+}
+
+.game_victory_icon {
+  margin: 0 0 20px 60px;
+  width: 50px;
+  height: 50px;
+  border: 2px #19bd51 solid;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  color: #19bd51;
+}
+.game_victory_icon i {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
