@@ -73,12 +73,23 @@ body {
 }
 
 .header {
-  margin: 0 0 10px 45px;
+    display:flex;
+    align-items: center;
+  justify-content: center;
 }
-.timer {
-  margin-left: 30px;
+.start_game {
+  display:flex;
+  margin: 15px  auto;
+  align-items: center;
+  justify-content: center;
+  border: black 2px solid;
+  padding: 5px 10px;
+  background-color: whitesmoke;
 }
-
+.start_game_btn {
+  background-color: white;
+  font-size: 14px;
+}
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -88,11 +99,10 @@ h1 {
 .score-panel {
   text-align: left;
   width: 345px;
-  margin-bottom: 15px;
+  margin: 0 45px 15px 0;
 }
 
 .score-panel .stars {
-
   padding: 0;
   display: inline-block;
   margin: 0 5px 0 0;
@@ -100,7 +110,6 @@ h1 {
 }
 
 .score-panel .stars li {
-
   display: inline-block;
 }
 
